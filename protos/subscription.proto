@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+message Subscription{
+    string id = 1;
+    SubsType type = 2;
+    google.protobuf.Timestamp start_timestamp = 3;
+    google.protobuf.Timestamp stop_timestamp = 4;
+}
+
+enum SubsType{
+    // ultimate business decision to be taken by the stakeholder
+    SMALL = 1;
+    MEDIUM = 2;
+    LARGE = 3;
+    EXTRA_LARGE = 4;
+}

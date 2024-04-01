@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+import "testimonial.proto";
+
+service TestimonialService {
+    rpc CreateTestimonial(CreateTestimonialRequest) returns (CreateTestimonialResponse);
+    rpc GetTestimonial(GetTestimonialRequest) returns (GetTestimonialResponse);
+    rpc UpdateTestimonial(UpdateTestimonialRequest) returns (UpdateTestimonialResponse);
+    rpc DeleteTestimonial(DeleteTestimonialRequest) returns (DeleteTestimonialResponse);
+}
+
+message CreateTestimonialRequest {
+    Testimonial testimonial = 1;
+}
+
+message CreateTestimonialResponse {
+    Testimonial testimonial = 1;
+}
+
+message GetTestimonialRequest {
+    string id = 1;
+}
+
+message GetTestimonialResponse {
+    Testimonial testimonial = 1;
+}
+
+message UpdateTestimonialRequest {
+    Testimonial testimonial = 1;
+}
+
+message UpdateTestimonialResponse {
+    Testimonial testimonial = 1;
+}
+
+message DeleteTestimonialRequest {
+    string id = 1;
+}
+
+message DeleteTestimonialResponse {}

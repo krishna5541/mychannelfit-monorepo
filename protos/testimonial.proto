@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message Testimonial{
+    string id = 1;
+    string Person author = 2;
+    string comment = 3;
+}

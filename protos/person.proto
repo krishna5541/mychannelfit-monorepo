@@ -1,0 +1,21 @@
+syntax = "proto3";
+import "./subscription.proto";
+
+message Person{
+    string id = 1;
+    string first_name = 2;
+    string last_name = 3;
+    int32 age = 4;
+    Gender gender = 5;
+    int32 weight = 6;
+    int32 height = 7;
+    repeated Subscription subscriptions = 8;
+    string profile_pic = 9;
+}
+
+enum Gender{
+    MALE = 1;
+    FEMALE = 2;
+    OTHER = 3;
+    NOT_SPECIFIED = 4;
+}
